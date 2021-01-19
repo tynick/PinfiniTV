@@ -36,3 +36,8 @@ cd "${INSTALL_PATH}" || exit 1
 # add cron.d entry
 header "adding entry to cron.d entry"
 echo '@reboot root /root/PinfiniTV/run.sh' > /etc/cron.d/pinfinitv || exit 1
+
+# reboot
+echo -e "\n\nRebooting Raspberry Pi in 10 seconds. Videos should begin auto playing when it boots back up."
+sleep 10
+reboot
