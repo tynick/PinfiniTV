@@ -3,11 +3,15 @@
 # base directory where all videos are stored
 # this could be a USB drive, SD card or even a NAS
 # videos will be sorted alphabetically 
-VIDEO_DIRECTORY=/mnt/media/
+VIDEO_DIRECTORY=/mnt/mydisk/
 
 # list the file types you want played here. separated by pipes. not case sensitive
 FILE_TYPES='mkv|mp4'
 
+chk_video_dir()
+{
+    [[ -f "${VIDEO_DIRECTORY}" ]] || echo ""${VIDEO_DIRECTORY}" does not exist"
+}
 
 get_playlist() 
 { 
