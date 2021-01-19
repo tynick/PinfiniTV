@@ -25,6 +25,8 @@ get_playlist()
 # start looping through the videos
 while :
 do
+    # check that our video directory still exists
+    chk_video_dir
     # get new playlist after old has played
     # this allows you do add new videos without stopping the service
     playlist=$(get_playlist)
