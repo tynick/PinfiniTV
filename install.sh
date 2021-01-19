@@ -23,7 +23,7 @@ fi
 
 # update and install dependencies
 header "installing packages and dependencies"
-apt-get update -y && apt-get install -y git omxplayer curl || exit 1
+apt-get update -y && apt-get install -y git omxplayer || exit 1
 
 # clone PinfiniTV repository
 header "clone PinfiniTV repository"
