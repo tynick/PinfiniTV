@@ -29,10 +29,6 @@ apt-get update -y && apt-get install -y git omxplayer || exit 1
 header "clone PinfiniTV repository"
 git clone "${GIT_URL}" "${INSTALL_PATH}" || exit 1
 
-# change to directory of cloned repo
-header "change to PinfiniTV directory"
-cd "${INSTALL_PATH}" || exit 1
-
 # add cron.d entry
 header "adding entry to cron.d entry"
 echo '@reboot root /root/PinfiniTV/run.sh' > /etc/cron.d/pinfinitv || exit 1
